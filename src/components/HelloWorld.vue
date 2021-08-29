@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  import { ref } from 'vue'
 export default {
   name: 'HelloWorld',
   // props: {
@@ -24,7 +25,7 @@ export default {
 
   data() {
     return {
-   cou : 0,
+   cou : ref(0),
    vari : ['C','X','%','/','7','8','9','*','4','5','6','-','1','2','3','+','00','0','.','='],
     }
   },
