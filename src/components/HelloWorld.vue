@@ -3,10 +3,10 @@
       <span v-for="todo in vari" :key="todo">
         <span v-if="todo === '7' || todo === '4' || todo === '1' || todo === '00'">
           <br/>
-          <button @click="mes(todo)" class="button">{{ todo }}</button>
+          <button @click="mes(todo)" class="button icon twitter">{{ todo }}</button>
         </span>
         <span v-else >
-          <button @click="mes(todo)" class="button">{{ todo }}</button>
+          <button @click="mes(todo)" class="button icon twitter">{{ todo }}</button>
         </span>
       </span>
       <br />
@@ -75,25 +75,44 @@ export default {
 
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
+  *:focus,
+  *:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+  .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .icon:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .twitter:hover{
+    background-color: #46c1f6;
+    color: #ffffff;
+  }
+
 .btn {
   color: #42b983;
 }
-.button{
-  width:50px;
-  height:50px;
-}
+
 </style>
