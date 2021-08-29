@@ -53,7 +53,8 @@ export default {
        else if(e === 'X' ){
          try{
          this.cou=this.cou.substring(0,this.cou.length-1);}
-         catch(err){
+         catch(err)
+         {
            console.log(err.message);
          }
        }
