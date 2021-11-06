@@ -1,4 +1,4 @@
-# calci
+# calci - calculator
 
 ## Project setup
 ```
